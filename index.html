@@ -1,0 +1,305 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oanh's dessert</title>
+</head>
+<style>
+    body {
+        background-color: rgb(255, 240, 241);
+        color: rgb(37, 32, 32);
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #remain {
+        font-size: 1.8em;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: rgb(196, 110, 101);
+        text-align: center;
+        margin-bottom: 2.5rem;
+    }
+
+    .grid {
+        position: relative;
+        max-width: 80%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .grid div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .dessert_item {
+        width: 20vw;
+        max-width: 140px;
+        height: 33%;
+        max-height: 140px;
+        object-fit: contain;
+        margin-bottom: 1rem;
+        padding: 1.3rem;
+    }
+
+    .button-area {
+        background-color: rgb(255, 255, 255);
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+        position: absolute;
+        bottom: 0;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .button-aji {
+        width: 30vw;
+        max-width: 8rem;
+        max-height: 10vh;
+        padding: 1rem 2rem 1rem;
+        object-fit: contain;
+    }
+
+    .grow {
+        display: inline-block;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-property: -webkit-transform;
+        transition-property: transform;
+        -webkit-transform: translateZ(0);
+        -ms-transform: translateZ(0);
+        transform: translateZ(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    }
+
+    .grow:hover {
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+
+    .pulse {
+        display: inline-block;
+        -webkit-transform: translateZ(0);
+        -ms-transform: translateZ(0);
+        transform: translateZ(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    }
+
+    .pulse:hover {
+        -webkit-animation-name: pulse;
+        animation-name: pulse;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-timing-function: linear;
+        animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes love {
+        0% {
+            font-size: 0;
+            opacity: 0;
+            padding-left: 10px;
+        }
+
+        25% {
+            font-size: 16px;
+            opacity: 1;
+            padding-left: 20px;
+        }
+
+        50% {
+            padding-left: 0px;
+        }
+
+        75% {
+            font-size: 28px;
+            opacity: 1;
+            padding-left: 20px;
+        }
+
+        100% {
+            font-size: 32px;
+            opacity: 0;
+            line-height: 25px;
+            padding-left: 10px;
+        }
+    }
+
+    .heart {
+        position: absolute;
+        display: block;
+        width: 70px;
+        height: 130px;
+        line-height: 100px;
+        text-align: center;
+        color: rgb(255, 83, 83);
+        animation: love 1s infinite ease-in-out;
+    }
+
+    @keyframes rocket {
+        0% {
+            left: 0%;
+            top: 0;
+        }
+
+        40% {
+            left: 2.5%;
+            top: 0;
+        }
+
+        75% {
+            left: -2.5%;
+            top: 0;
+        }
+
+        100% {
+            left: 0%;
+            top: 0;
+        }
+    }
+
+    .rocket-animation {
+        position: relative;
+        animation-name: rocket;
+        animation-duration: 3s;
+        animation-delay: 0.5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+    .fadeOut {
+        animation: fadeOut 1s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes fadeOut {
+        0% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+    .pig {
+        display: none;
+        width: 90%;
+        height: auto;
+        margin: auto;
+    }
+</style>
+
+<body>
+    <div>
+        <h1 id="remain">Remaining：9</h1>
+        <div class="heart">♥</div>
+        <div class="grid rocket-animation ">
+            <img class="pig grow" title="" src="/images/pig.png" alt="pig">
+            <div class="grid-row">
+                <img class="dessert_item grow" title="" src="/images/1.png" alt="dessert_item">
+                <img class="dessert_item grow" title="" src="/images/2.png" alt="dessert_item">
+                <img class="dessert_item grow" title="" src="/images/3.png" alt="dessert_item">
+            </div>
+            <div class="grid-row">
+                <img class="dessert_item grow" title="" src="/images/4.png" alt="dessert_item">
+                <img class="dessert_item grow" title="" src="/images/5.png" alt="dessert_item">
+                <img class="dessert_item grow" title="" src="/images/6.png" alt="dessert_item">
+            </div>
+            <div class="grid-row">
+                <img class="dessert_item grow" title="" src="/images/7.png" alt="dessert_item">
+                <img class="dessert_item grow" title="" src="/images/8.png" alt="dessert_item">
+                <img class="dessert_item grow" title="" src="/images/9.png" alt="dessert_item">
+            </div>
+        </div>
+    </div>
+    <div class="button-area">
+        <img id="spoon" class="button-aji grow" title="" src="/images/spoon.png" alt="spoon">
+    </div>
+</body>
+
+
+<script type="text/javascript">
+    const MAX_DESSERT = 9;
+    var clickDessertCnt = 0;
+
+    window.onload = function () {
+
+        let remainElm = document.getElementById('remain');
+
+        document.getElementById('spoon').addEventListener('click', function (e) {
+            reset(remainElm);
+        });
+
+        // add event listener for "dessert_item"
+        let dessertItems = document.getElementsByClassName('dessert_item');
+        for (let i = 0; i < dessertItems.length; i++) {
+            dessertItems[i].addEventListener('click', function (e) {
+                // If this item has fadeOut class, do nothing
+                if (this.classList.contains('fadeOut')) {
+                    return;
+                }
+                // add class fadeOut to item
+                this.classList.add('fadeOut');
+
+                clickDessertCnt += 1;
+                if (clickDessertCnt < MAX_DESSERT) {
+                    remainElm.innerHTML = "Remaining：" + (MAX_DESSERT - clickDessertCnt);
+                } else {
+                    // change to pig
+                    remainElm.innerHTML = "Oanh become a pig! ^^";
+                    document.getElementsByClassName('pig')[0].style.display = 'block';
+                    // Add class confetti
+                    for (let i = 0; i < 100; i++) {
+                        let confetti = document.createElement('div');
+                        confetti.classList.add('confetti');
+                        confetti.style.left = Math.random() * 100 + 'vw';
+                        confetti.style.animationDuration = Math.random() * 2 + 3 + 's';
+                        document.body.appendChild(confetti);
+                    }
+
+                    // grid-row display none
+                    let gridRows = document.getElementsByClassName('grid-row');
+                    for (let i = 0; i < gridRows.length; i++) {
+                        gridRows[i].style.display = 'none';
+                    }
+                }
+            });
+        }
+    };
+
+    function reset(_remainElm) {
+        // remove all fadeOut class
+        let dessertItems = document.getElementsByClassName('dessert_item');
+        for (let i = 0; i < dessertItems.length; i++) {
+            dessertItems[i].classList.remove('fadeOut');
+        }
+
+        // class pig display none
+        document.getElementsByClassName('pig')[0].style.display = 'none';
+
+        clickDessertCnt = 0;
+        _remainElm.innerHTML = "Remaining：" + MAX_DESSERT;
+
+        // grid-row display block
+        let gridRows = document.getElementsByClassName('grid-row');
+        for (let i = 0; i < gridRows.length; i++) {
+            gridRows[i].style.display = 'flex';
+        }
+
+    }
+
+</script>
+
+</html>
