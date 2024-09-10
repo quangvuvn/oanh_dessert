@@ -260,14 +260,6 @@
                     // change to pig
                     remainElm.innerHTML = "Oanh become a pig! ^^";
                     document.getElementsByClassName('pig')[0].style.display = 'block';
-                    // Add class confetti
-                    for (let i = 0; i < 100; i++) {
-                        let confetti = document.createElement('div');
-                        confetti.classList.add('confetti');
-                        confetti.style.left = Math.random() * 100 + 'vw';
-                        confetti.style.animationDuration = Math.random() * 2 + 3 + 's';
-                        document.body.appendChild(confetti);
-                    }
 
                     // grid-row display none
                     let gridRows = document.getElementsByClassName('grid-row');
